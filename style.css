@@ -6,7 +6,7 @@ body {
     color: #6c7279;
     -webkit-font-smoothing: antialiased;
 
-     background-color: #30344e;
+     background-color: #;
 }
 
 *,
@@ -96,7 +96,8 @@ p {
     height: 750px;
     padding-top: 100px;
 
-    background: #31344e url("img/intro-bg.jpg") center no-repeat / cover;
+    background: #31344e url("img/intro-bg.jpg") center no-repeat;
+    baCKGROund-size: cover;
 }
 
 .intro__inner {
@@ -126,6 +127,8 @@ p {
     line-height: 1.5;
     font-weight: 400;
 }
+
+
 
 
 /* Button
@@ -522,4 +525,87 @@ p {
 
 .copyright__text span {
     color: #fff;
+}
+
+/* Burher */
+.burger {
+    display: none;
+    padding: 9px 2px;
+    
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+.burger_item {
+    display: block;
+    width: 28px;
+    height: 3px;
+    
+    background-color: #fff;
+    
+    font-size: 0;
+    color: transparent;
+    
+    
+    position: relative;
+}
+
+.burger_item:before,
+.burger_item:after {
+    content:"";
+    width: 100%;
+    height: 100%;
+    
+    background-color: #fff;
+    
+    position: absolute;
+    left: 0;
+    z-index: 1;   
+}
+
+.burger_item:before {
+    top: -8px;
+}
+
+.burger_item:after {
+    bottom: -8px;
+}
+
+
+/* Media
+===========================*/
+
+@media (max-width: 991px) {
+    /* Nav */
+    .nav{
+        dispay: none;
+    }
+    
+    /* Burger */
+    .burger{
+        display: block;
+    }
+    
+    /* intro */
+    .intro_title{
+        font-size: 40px
+    }
+    /* Btn */
+    .btn {     
+    }
+}
+
+@media (max-width: 767px) {
+    /* Intro */
+    .intro{
+        height: auto;
+        padding-top: 130px;
+        padding-bottom: 30px; 
+    }
+    .intro_title  {
+        font-size: 30px;
+    }
+    .intro_subtitle {
+        font-size: 16px;
+    }
 }
